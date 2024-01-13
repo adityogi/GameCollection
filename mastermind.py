@@ -20,11 +20,11 @@ def get_user_input():
 		user_input = input(f"Guess the {NUM_DIGITS} digit number: ")
 		if user_input in ['q', 'Q', 'x', 'X']:
 			print("Sorry to see you go")
-			exit(0)
+			exit(0) #Exits the game smoothly and dosnt flag any signs of warning or error
 		# elif user_input in ['n', 'N']:
 		# 	new_game()
-		elif validate(user_input):
-			return user_input
+		elif validate(user_input):    #validate() function is like the checkpoint guard who decides if you can continue on that path or not if True then executes elif block else moves on.
+			return user_input      #return inside a function specifies what value you want to send back, in this case user_input
 
 def validate(user_input):
 	try:
@@ -38,7 +38,7 @@ def validate(user_input):
 		print("Try again, input is invalid:", e)
 
 def new_game():
-	num = random.randrange(pow(10, NUM_DIGITS - 1), pow(10, NUM_DIGITS))
+	num = random.randrange(pow(10, NUM_DIGITS - 1), pow(10, NUM_DIGITS))    #See Function.md
 	# print("random number", num)
 	play_game(num)
 
