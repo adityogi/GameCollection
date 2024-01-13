@@ -35,6 +35,6 @@ def main():
             print("Invalid choice. Please choose again.")
 
 
-# The code within this conditional block will only execute if main.py is run directly (and not imported elsewhere).
+# The code within this conditional block will only execute if main.py is run directly (and not imported elsewhere, as in the program is not called within an other file.).
 if __name__ == "__main__":
     main()
